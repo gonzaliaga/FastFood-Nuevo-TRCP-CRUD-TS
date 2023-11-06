@@ -1,0 +1,24 @@
+{
+  "name": "fastfood-nuevo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  },
+  "keywords": [],
+  "author": "Gonzalo Cuellar Aliaga",
+  "Mail": "gonzaliaga@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.20",
+    "@types/morgan": "^1.9.7",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@trpc/server": "^10.43.1",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  }
+}
