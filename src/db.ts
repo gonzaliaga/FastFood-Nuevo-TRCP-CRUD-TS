@@ -1,13 +1,13 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
+require('dotenv').config();
 
 export const dbConnect = async () => {
     try {
-        const db = await mongoose.connect('mongodb+srv://gonzalo:Julio1397@cluster0.h1ctdry.mongodb.net/foodapp?retryWrites=true&w=majority');
+        const db = await mongoose.connect(process.env.MONGODB_URI);
         console.log('Database is connected to', db.connection.db.databaseName);
     } catch (error) {
         if (error instanceof Error) {
             console.log(error.message);
         }
-
     }
 };
