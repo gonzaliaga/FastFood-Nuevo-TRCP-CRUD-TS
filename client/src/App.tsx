@@ -2,9 +2,7 @@ import { trpc } from './trpc';
 import { httpBatchLink } from '@trpc/client';
 import { useState } from 'react';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
-import FoodList from './components/FoodList';
-import FoodForm from './components/FoodForm';
-
+import { AppContent } from './components/AppContent'
 
 function App() {
   const [queryClient] = useState(() => new QueryClient())
@@ -21,11 +19,7 @@ function App() {
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
-        <FoodForm />
-        <FoodList />
-
-
-        <div>esta es la App de Client</div>
+        <AppContent />
       </QueryClientProvider>
     </trpc.Provider>
 
